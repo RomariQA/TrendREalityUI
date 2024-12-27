@@ -100,7 +100,7 @@ public class FavoriteAddTests extends ApiTestBase {
     @DisplayName("Успешное добавление квартиры в избранное")
     @Test
     void successfulAddApartmentToFavorite(){
-        FavoriteApi.deleteAllFavorites(session);
+        FavoriteApi.deleteAllFavorites();
 
         TestData testData = new TestData();
         FavoriteAddApartmentRequestModel request = new FavoriteAddApartmentRequestModel(testData.getApartment_id(), testData.getCity());

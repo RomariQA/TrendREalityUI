@@ -21,6 +21,7 @@ public class FavoriteAddTests extends ApiTestBase {
     @DisplayName("Успешное добавление ЖК в избранное")
     @Test
     void successfulAddBlockToFavorite(){
+        FavoriteApi.deleteAllFavorites(session);
 
         TestData testData = new TestData();
         FavoriteAddBlockRequestModel request = new FavoriteAddBlockRequestModel(testData.getBlock_id(), testData.getCity());
@@ -99,6 +100,7 @@ public class FavoriteAddTests extends ApiTestBase {
     @DisplayName("Успешное добавление квартиры в избранное")
     @Test
     void successfulAddApartmentToFavorite(){
+        FavoriteApi.deleteAllFavorites(session);
 
         TestData testData = new TestData();
         FavoriteAddApartmentRequestModel request = new FavoriteAddApartmentRequestModel(testData.getApartment_id(), testData.getCity());

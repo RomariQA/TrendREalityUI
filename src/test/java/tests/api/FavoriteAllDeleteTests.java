@@ -4,6 +4,7 @@ import api.FavoriteApi;
 import data.TestData;
 import models.FavoriteAllDelete.FavoriteAllDeleteResponseModel;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.step;
@@ -11,6 +12,7 @@ import static io.restassured.RestAssured.given;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static specs.LogSpec.*;
 
+@Tag("allTests")
 public class FavoriteAllDeleteTests extends ApiTestBase {
 
     @DisplayName("Успешная очистка избранного (в избранном 1 Жк и 1 квартира)")

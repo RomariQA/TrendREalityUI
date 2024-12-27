@@ -9,6 +9,7 @@ import io.qameta.allure.selenide.AllureSelenide;
 import io.restassured.RestAssured;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.Cookie;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -42,18 +43,21 @@ public class UiTestBase {
         Configuration.browserCapabilities = capabilities;
 
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+    }
 
-        testData = new TestData();
-        session = testData.getSession();
-        city_id = testData.getCity();
+    @BeforeEach
+    void beforeEach(){
+    testData = new TestData();
+    session = testData.getSession();
+    city_id = testData.getCity();
 
-        Cookie sessionCookie = new Cookie.Builder("session", testData.getSession())
-                .path("/")
-                .build();
+    Cookie sessionCookie = new Cookie.Builder("session", testData.getSession())
+            .path("/")
+            .build();
 
         RestAssured.given().cookies("session", testData.getSession());
 
-        open("/");
+    open("/");
         WebDriverRunner.getWebDriver().manage().addCookie(new Cookie("selected_city", city_id));
         WebDriverRunner.getWebDriver().manage().addCookie(sessionCookie);
     }

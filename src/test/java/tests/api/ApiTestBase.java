@@ -31,13 +31,13 @@ public class ApiTestBase {
         Configuration.browserCapabilities = capabilities;
 
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-
-        testData = new TestData();
-        session = testData.getSession();
     }
 
     @BeforeEach
     void beforeEach(){
+        testData = new TestData();
+        session = testData.getSession();
+
         Cookie sessionCookie = new Cookie.Builder("session", testData.getSession())
                 .path("/")
                 .build();

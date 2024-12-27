@@ -57,7 +57,7 @@ public class UiTestBase {
 
         RestAssured.given().cookies("session", testData.getSession());
 
-    open("/");
+    open("/welcome-banner-1.07811973e1dd540603ff.png");
         WebDriverRunner.getWebDriver().manage().addCookie(new Cookie("selected_city", city_id));
         WebDriverRunner.getWebDriver().manage().addCookie(sessionCookie);
     }

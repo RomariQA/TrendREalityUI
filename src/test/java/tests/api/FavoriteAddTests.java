@@ -15,6 +15,7 @@ import static io.restassured.RestAssured.given;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static specs.LogSpec.*;
 
+@DisplayName("Добавление в избранное")
 @Tag("allTests")
 public class FavoriteAddTests extends ApiTestBase {
 

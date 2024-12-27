@@ -12,6 +12,7 @@ import static io.restassured.RestAssured.given;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static specs.LogSpec.*;
 
+@DisplayName("Полная очистка избранного")
 @Tag("allTests")
 public class FavoriteAllDeleteTests extends ApiTestBase {
 

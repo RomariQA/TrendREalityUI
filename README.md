@@ -64,7 +64,8 @@ gradle clean api
 1. `Suites` - Общий список автотестов
 2. `Test body`- Содержание автотеста
 3. `Tear Down` - Вложения
-   <img src="images/jenkins-details.png">
+
+   <img src="images/jenkins-detailss.png">
 
 
 ## Интеграция с <b><a target="_blank" href="https://allure.autotests.cloud/project/4541/dashboards">Allure TestOps</a></b>

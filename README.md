@@ -52,7 +52,7 @@ gradle clean api
 <img src="images/jenkins-project.png">
 
 
-## Интеграция с <b><a target="_blank" href="https://jenkins.autotests.cloud/job/TrendREalityUI/18/allure/">Allure report</a></b>
+## Интеграция с <b><a target="_blank" href="https://jenkins.autotests.cloud/job/TrendREalityUI/22/allure/">Allure report</a></b>
 #### Диаграммы прохождения тестов
 `ALLURE REPORT` - отображает дату и время теста, общее количество запущенных тестов, а также диаграмму с процентом и количеством успешных, упавших и сломавшихся в процессе выполнения тестов <br/>
 `TREND` - отображает тенденцию выполнения тестов для всех запусков <br/>

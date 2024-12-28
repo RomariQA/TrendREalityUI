@@ -1,4 +1,4 @@
-package tests;
+package tests.web;
 
 import api.FavoriteApi;
 import org.junit.jupiter.api.DisplayName;
@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import pages.FavoritePage;
 import pages.SearchPage;
 
-@Tag("allTests")
+@Tag("web")
 @DisplayName("Страница избранного")
 public class FavoriteTests extends UiTestBase {
 

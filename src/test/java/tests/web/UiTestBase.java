@@ -1,12 +1,14 @@
-package tests;
+package tests.web;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.WebDriverRunner;
 import com.codeborne.selenide.logevents.SelenideLogger;
+import config.WebConfig;
 import data.TestData;
 import helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
 import io.restassured.RestAssured;
+import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -25,15 +27,17 @@ public class UiTestBase {
 
     @BeforeAll
     static void beforeAll() {
+        WebConfig webConfig = ConfigFactory.create(WebConfig.class, System.getProperties());
+
         Configuration.baseUrl = "https://trendrealty.ru";
         RestAssured.baseURI = "https://api.trendrealty.ru";
         Configuration.pageLoadStrategy = "eager";
 
 
-        Configuration.remote = System.getProperty("remoteURL");
-        Configuration.browserSize = System.getProperty("browserSize");
-        Configuration.browser = System.getProperty("browser");
-        Configuration.browserVersion = System.getProperty("browserVersion");
+        Configuration.remote = webConfig.getRemoteUrl();
+        Configuration.browserSize = webConfig.getBrowserSize();
+        Configuration.browser = webConfig.getBrowserName();
+        Configuration.browserVersion = webConfig.getBrowserVersion();
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(

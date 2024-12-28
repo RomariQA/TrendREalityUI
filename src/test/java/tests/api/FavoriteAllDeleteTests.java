@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static specs.LogSpec.*;
 
 @DisplayName("Полная очистка избранного")
-@Tag("allTests")
+@Tag("api")
 public class FavoriteAllDeleteTests extends ApiTestBase {
 
     @DisplayName("Успешная очистка избранного (в избранном 1 Жк и 1 квартира)")

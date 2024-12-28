@@ -69,7 +69,7 @@ gradle clean api
 
 ## Интеграция с <b><a target="_blank" href="https://allure.autotests.cloud/project/4541/dashboards">Allure TestOps</a></b>
 
->Диаграммы прохождения тестов
+>Диаграммы прохождения тестов 
 >
 <img src="images/allure-testops-dashboards.png">
 
